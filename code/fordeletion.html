@@ -1,34 +1,20 @@
 <html>
 <head>
+<script>
+function windowClose() {
+  window.open('','_parent','');
+  window.close();
+}
+</script>
 <title> QUIZ CREATOR </title>
 <link rel="icon" href="../graphics/icons/icon_circle.png">
 </head>
 <body>
 <div id="statusbar">
 <img id="export" src="../graphics/upper-menu/export_button.png" >
-<img id="close" src="../graphics/upper-menu/close_button.png"  style="position: absolute;right:10;" >
+<img id="close" src="../graphics/upper-menu/close_button.png"  style="position: absolute;right:10;" onclick="windowClose();">
 <img id="minimize" src="../graphics/upper-menu/minimize_button.png" style="position: absolute;right:45;" >
 <img id="settings" src="../graphics/upper-menu/settings_button.png" style="position: absolute;right:80;" >
-<script>
-(function () {
-  const {BrowserWindow} = require('electron').remote
-  funtion init() {
-    document.getElementById("minimize").addEventListener("click", (e) => {
-      var window = BrowserWindow.getFocusedWindow();
-      window.minimize();
-    });
-    document.getElementById("close").addEventListener("click", (e) => {
-      var window = BrowserWindow.getFocusedWindow();
-      window.close();
-    });
-  };
-  document.onreadystatechange = () => {
-    if (document.readyState == "complete") {
-      init();
-    }
-  };
-})();
-</script>
 </div>
 <hr style="margin-left:0%;margin-right:0%;background-color:black;">
 <div id="tabs">
