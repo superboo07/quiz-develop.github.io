@@ -1,20 +1,15 @@
 <html>
 <head>
-<script>
-function windowClose() {
-  window.open('','_parent','');
-  window.close();
-}
-</script>
 <title> QUIZ CREATOR </title>
 <link rel="icon" href="../graphics/icons/icon_circle.png">
 </head>
 <body>
+<div id="page">
 <div id="statusbar">
-<img id="export" src="../graphics/upper-menu/export_button.png" >
-<img id="close" src="../graphics/upper-menu/close_button.png"  style="position: absolute;right:10;" onclick="windowClose();">
-<img id="minimize" src="../graphics/upper-menu/minimize_button.png" style="position: absolute;right:45;" >
-<img id="settings" src="../graphics/upper-menu/settings_button.png" style="position: absolute;right:80;" >
+<img id="export" src="../graphics/upper-menu/export_button.png" onclick="exportNormal();">
+<img id="close" src="../graphics/upper-menu/close_button.png"  style="position:absolute;right:10;" onclick="windowClose();">
+<img id="fullscreen" src="../graphics/upper-menu/fullscreen_button.png" style="position:absolute;right:45" onclick="toggleFullScreen();">
+<img id="settings" src="../graphics/upper-menu/settings_button.png" style="position:absolute;right:80;" onclick="window.open('settings.html', '_self' )" >
 </div>
 <hr style="margin-left:0%;margin-right:0%;background-color:black;">
 <div id="tabs">
@@ -26,6 +21,22 @@ function windowClose() {
 <img id="tog1" src="../graphics/other/toggle.png" >
 <img id="tog2" src="../graphics/other/toggle1.png" >
 <img id="textbox" src="../graphics/other/textbox.png" >
+</div>
+<script>
+  function windowClose() {
+  window.open('','_parent','');
+  window.close();
+}
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+</script>
 </div>
 </body>
 </html>
