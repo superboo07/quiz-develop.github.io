@@ -2,6 +2,12 @@
 <head>
 <title> QUIZ CREATOR </title>
 <link rel="icon" href="../graphics/icons/icon_circle.png">
+  <script>
+      function windowClose() {
+  window.open('','_parent','');
+  window.close();
+}
+  </script>
 </head>
 <body>
 <div id="page">
@@ -23,10 +29,6 @@
 <img id="textbox" src="../graphics/other/textbox.png" >
 </div>
 <script>
-  function windowClose() {
-  window.open('','_parent','');
-  window.close();
-}
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
