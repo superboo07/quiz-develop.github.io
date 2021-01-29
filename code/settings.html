@@ -1,23 +1,39 @@
 <html>
 <head>
+<title> QUIZ CREATOR </title>
+<link rel="icon" href="../graphics/icons/icon_circle.png">
+<script>
+      function windowClose() {
+  window.open('','_parent','');
+  window.close();
+}
+</script>
 </head>
 <body>
+<div>
+<img id="close" src="../graphics/upper-menu/close_button.png"  style="position:absolute;right:10;" onclick="document.exitFullscreen(); windowClose();">
+<img id="fullscreen" src="../graphics/upper-menu/fullscreen_button.png" style="position:absolute;right:45" onclick="toggleFullScreen();">
+<img id="settings" src="../graphics/upper-menu/settings_button.png" style="position:absolute;right:80;" onclick="window.open('fordeletion.html', '_self' )" >
+<br> <br>
+<hr style="margin-left:0%;margin-right:0%;background-color:black"> 
+</div>
+<div>
 <h2> Settings <h2>
 <hr style="margin-left:0%;margin-right:0%;background-color:black">
 <h5> File </h5>
 <p id="savesetts"> Where to save ? <img src="../graphics/settings/file.png"> </p>
-<hr style="margin-left:0%;margin-right:0%;background-color:darkgray;">
+<hr style="margin-left:0%;margin-right:0%;background-color:darkgrey;">
 <h5> Personalization </h5>
-<hr style="margin-left:0%;margin-right:0%; background-color:gray;">
-<p id="dark"> Dark theme (beta) <img src="../graphics/settings/toggle.png"> </p>
-<p id="autosave"> Autosave <img src="../graphics/settings/toggle.png"> </p>
-<p id="texttheme" > Text mode (no graphics) <img src="../graphics/settings/toggle.png"> </p>
+<hr style="margin-left:0%;margin-right:0%; background-color:grey;">
+<p id="dark"> Dark theme (beta) <img src="../graphics/settings/unavailable_switch.png"> </p>
+<p id="autosave"> Autosave <img src="../graphics/settings/unavailable_switch.png"> </p>
+<p id="texttheme" > Text mode (no graphics) <img src="../graphics/settings/unavailable_switch.png"> </p>
 <hr style="margin-left:0%; margin-right:0%; background-color:darkgray">
 <h5> Easy access </h5>
-<hr style="margin-left:0%; margin-right:0%; background-color:gray">
-<p id="hearbutton"> Hearable buttons <img src="../graphics/settings/toggle.png"> </p>
-<p id="bigmouse"> Big mouse <img src="../graphics/settings/toggle.png"> </p>
-<p id="confirmations"> Confirm actions <img src="../graphics/settings/toggle.png"> </p>
+<hr style="margin-left:0%; margin-right:0%; background-color:grey">
+<p id="hearbutton"> Hearable buttons <img src="../graphics/settings/switch_off.png"> </p>
+<p id="bigmouse"> Big mouse <img src="../graphics/settings/unavailable_switch.png"> </p>
+<p id="confirmations"> Confirm actions <img src="../graphics/settings/unavailable_switch.png"> </p>
 <hr style="margin-left:0%; margin-right:0%; background-color:black" >
 <h3> INFO </h3>
 <img src="../graphics/media/help.png" href="help.html" > 
@@ -25,6 +41,17 @@
 <img src="../graphics/media/github.png" href="https://github.com/hacknorris-notyetbanned" style="position:absolute; right:45;" >
 <img src="../graphics/media/mail.png" href="mailto:hacknorris123456789@gmail.com" style="position:absolute; right:80;" >
 <img src="../graphics/media/page.png" href="https://hacknorris-notyetbanned.github.io/hacknorris.github.io/" style="position:absolute; right:115;" >
-<hr style="margin-left:0%; margin-right:0%; background-color:black" >
+</div>
+<script>
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+</script>
 </body>
 </html>
