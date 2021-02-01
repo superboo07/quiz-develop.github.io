@@ -3,6 +3,18 @@
 <script>
 </script>
 </head>
-<body onload="window.open('code/fordeletion.html', 'ide', 'notoolbar,nomenubar,scrollbars,resizable,height=800,width=760,left=center,top=center' ); window.close();">
+<!-- Buttons that allow the user to choose which way they want to open the IDE -->
+<body>
+    <button onclick=Popup() type="button">Open IDE in pop up window. (Make sure pop ups are enabled)</button>
+    <button onclick=next() type="button">Open IDE in new tab</button>
 </body>
+<!-- Some basic functions -->
+<script>
+    function Popup() {  
+        window.open('code/fordeletion.html', 'ide', 'notoolbar,nomenubar,scrollbars,resizable,height=800,width=760,left=center,top=center');
+}  
+    function next() {
+        open('code/fordeletion.html')
+    }
+</script>
 </html>
