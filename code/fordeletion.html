@@ -9,27 +9,28 @@
 }
 </script>
 </head>
+<!-- Display project selections and status bar -->
 <body>
 <div id="page">
 <div id="statusbar">
-<img id="export" src="../graphics/upper-menu/export_button.png" onclick="exportNormal();">
-<img id="close" src="../graphics/upper-menu/close_button.png"  style="position:absolute;right:10;" onclick="document.exitFullscreen(); windowClose();">
-<img id="fullscreen" src="../graphics/upper-menu/fullscreen_button.png" style="position:absolute;right:45" onclick="toggleFullScreen();">
-<img id="settings" src="../graphics/upper-menu/settings_button.png" style="position:absolute;right:80;" onclick="window.open('settings.html', '_self' )" >
+<img id="export" src="../graphics/upper-menu/export_button.png" onclick="exportNormal();" title="Export">
+<img id="fullscreen" src="../graphics/upper-menu/fullscreen_button.png" style="position:absolute;right:15" onclick=toggleFullScreen(); title="Fullscreen">
+<img id="settings" src="../graphics/upper-menu/settings_button.png" style="position:absolute;right:50;" onclick="window.open('settings.html', '_self' )" title="settings">
 </div>
 <hr style="margin-left:0%;margin-right:0%;background-color:black;">
 <div id="tabs">
 <div id="tabs-buttons"> <nobr>
-<img id="projectsettings" src="../graphics/tabs/projsettings.png" href="projset.html" width="120" height="60" target="editor" >
-<img id="level1" src="../graphics/tabs/level1.png" onclick="levelfirst();" width="120" height="60">
-<img id="level2" src="../graphics/tabs/level2.png" onclick="levelsecond();" width="120" height="60">
-<img id="level3" src="../graphics/tabs/level3.png" onclick="levelthird();" width="120" height="60">
-<img id="level4" src="../graphics/tabs/level4.png" onclick="levelfourth();" width="120" height="60">
-<img id="level5" src="../graphics/tabs/level5.png" onclick="levelfifth();" width="120" height="60"> </nobr>
+<img id="projectsettings" src="../graphics/tabs/projsettings.png" href="projset.html" width="120" height="60" target="editor" title="Project settings">
+<img id="level1" src="../graphics/tabs/level1.png" onclick="levelfirst();" width="120" height="60" title="Level 1">
+<img id="level2" src="../graphics/tabs/level2.png" onclick="levelsecond();" width="120" height="60" title="Level 2">
+<img id="level3" src="../graphics/tabs/level3.png" onclick="levelthird();" width="120" height="60" title="Level 3">
+<img id="level4" src="../graphics/tabs/level4.png" onclick="levelfourth();" width="120" height="60" title="Level 4">
+<img id="level5" src="../graphics/tabs/level5.png" onclick="levelfifth();" width="120" height="60" title="Level 5"> </nobr>
 </div>
 <hr style="margin-left:0%; margin-right:0%; background-color:black" >
 <div id="mainscreen">
 </div>
+<!-- A few functions -->
 <script>
 function levelbutton() {
 
